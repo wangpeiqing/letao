@@ -188,4 +188,13 @@ th {
 .hide {
   display: none; }
 
-/*# sourceMappingURL=index.css.map */
+body, html {
+  height: 100%; }
+
+.body_bg {
+  background-color: #222D32; }
+
+.mgt_150 {
+  margin-top: 150px; }
+
+/*# sourceMappingURL=common.css.map */

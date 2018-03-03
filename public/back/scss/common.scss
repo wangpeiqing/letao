@@ -1,0 +1,14 @@
+@import "normalize";
+@import "mixin";
+@import "extend";
+@import "base";
+
+body,html{
+  height: 100%;
+}
+.body_bg{
+  background-color: #222D32;
+}
+.mgt_150{
+  margin-top: 150px;
+}
