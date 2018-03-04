@@ -197,4 +197,8 @@ body, html {
 .mgt_150 {
   margin-top: 150px; }
 
+table th, table td {
+  text-align: center;
+  vertical-align: middle; }
+
 /*# sourceMappingURL=common.css.map */
