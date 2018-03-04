@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;
@@ -188,6 +189,12 @@ th {
 .hide {
   display: none; }
 
+li {
+  list-style: none; }
+
+a, a:hover, a:link, a:active, a:visited {
+  text-decoration: none !important; }
+
 body, html {
   height: 100%; }
 
@@ -200,5 +207,98 @@ body, html {
 table th, table td {
   text-align: center;
   vertical-align: middle; }
+
+.page_container {
+  width: 100%;
+  height: 100%;
+  /*------ 侧边栏样式 ------*/
+  /*------ 侧边栏样式 ------*/
+  /*------ 页面主体样式 ------*/
+  /*------ 页面主体样式 ------*/ }
+  .page_container .page_aside {
+    background-color: #222D32;
+    width: 180px;
+    height: 100%;
+    transition: all 0.5s; }
+    .page_container .page_aside .title {
+      height: 50px;
+      line-height: 50px;
+      font-size: 24px;
+      text-align: center;
+      background-color: #367FA9;
+      color: #fff; }
+    .page_container .page_aside .user {
+      width: 180px;
+      height: 150px; }
+      .page_container .page_aside .user img {
+        display: block;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        margin: 30px auto 0; }
+      .page_container .page_aside .user p {
+        text-align: center;
+        color: #fff;
+        font-size: 16px;
+        line-height: 40px; }
+    .page_container .page_aside ul {
+      padding: 0; }
+      .page_container .page_aside ul li {
+        line-height: 40px; }
+        .page_container .page_aside ul li a {
+          color: #ccc;
+          display: block;
+          width: 100%;
+          height: 100%;
+          padding-left: 30px;
+          border: 3px solid transparent; }
+      .page_container .page_aside ul li.parent a.current {
+        border-left: 3px solid transparent;
+        background-color: transparent; }
+      .page_container .page_aside ul li.parent ul li.child a {
+        padding-left: 60px; }
+      .page_container .page_aside ul li.parent ul li.child a.current {
+        border-left: 3px solid #069;
+        background-color: #1D1F21; }
+      .page_container .page_aside ul li a.current {
+        border-left: 3px solid #069;
+        background-color: #1D1F21; }
+  .page_container .aside_hide {
+    margin-left: -180px; }
+  .page_container .page_main {
+    margin-left: 180px;
+    transition: all 0.5s; }
+    .page_container .page_main .head {
+      height: 50px;
+      line-height: 50px;
+      width: 100%;
+      background-color: #3C8DBC;
+      color: #fff;
+      padding: 0 20px;
+      font-size: 18px;
+      margin-bottom: 20px; }
+      .page_container .page_main .head div {
+        width: 30px;
+        text-align: center; }
+        .page_container .page_main .head div a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          color: #fff; }
+    .page_container .page_main .container-fluid ul {
+      padding: 8px 15px !important;
+      background-color: #F5F5F5;
+      box-sizing: border-box;
+      padding: 0;
+      display: inline-block;
+      width: 100%;
+      border-radius: 5px;
+      color: #777777; }
+      .page_container .page_main .container-fluid ul li {
+        display: inline-block; }
+      .page_container .page_main .container-fluid ul span {
+        color: #ccc; }
+  .page_container .mgl_0 {
+    margin-left: 0px; }
 
 /*# sourceMappingURL=common.css.map */

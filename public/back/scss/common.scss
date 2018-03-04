@@ -3,19 +3,150 @@
 @import "extend";
 @import "base";
 
-body,html{
+body, html {
   height: 100%;
 }
-.body_bg{
+
+.body_bg {
   background-color: #222D32;
 }
-.mgt_150{
+
+.mgt_150 {
   margin-top: 150px;
 }
 
-table{
-  th,td{
+table {
+  th, td {
     text-align: center;
     vertical-align: middle;
   }
 }
+
+.page_container {
+  width: 100%;
+  height: 100%;
+  /*------ 侧边栏样式 ------*/
+  .page_aside {
+    background-color: #222D32;
+    width: 180px;
+    height: 100%;
+    transition: all 0.5s;
+    .title {
+      height: 50px;
+      line-height: 50px;
+      font-size: 24px;
+      text-align: center;
+      background-color: #367FA9;
+      color: #fff;
+    }
+    .user {
+      width: 180px;
+      height: 150px;
+      img {
+        display: block;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        margin: 30px auto 0;
+      }
+      p{
+        text-align: center;
+        color: #fff;
+        font-size: 16px;
+        line-height: 40px;
+      }
+    }
+    ul {
+      padding: 0;
+      li {
+        line-height: 40px;
+        a {
+          color: #ccc;
+          display: block;
+          width: 100%;
+          height: 100%;
+          padding-left: 30px;
+          border: 3px solid transparent;
+        }
+      }
+      li.parent {
+        a.current {
+          border-left: 3px solid transparent;
+          background-color: transparent;
+
+        }
+        ul {
+          li.child {
+            a {
+              padding-left: 60px;
+            }
+            a.current {
+              border-left: 3px solid #069;
+              background-color: #1D1F21;
+            }
+          }
+        }
+      }
+      li {
+        a.current {
+          border-left: 3px solid #069;
+          background-color: #1D1F21;
+        }
+      }
+    }
+  }
+  .aside_hide{
+    margin-left: -180px;
+  }
+  /*------ 侧边栏样式 ------*/
+
+  /*------ 页面主体样式 ------*/
+  .page_main {
+    margin-left: 180px;
+    transition: all 0.5s;
+    .head {
+      height: 50px;
+      line-height: 50px;
+      width: 100%;
+      background-color: #3C8DBC;
+      color: #fff;
+      padding: 0 20px;
+      font-size: 18px;
+      margin-bottom: 20px;
+      div{
+        width: 30px;
+        text-align: center;
+        a{
+          display: block;
+          width: 100%;
+          height: 100%;
+          color: #fff;
+        }
+      }
+    }
+
+    .container-fluid{
+      ul{
+        padding: 8px 15px!important;
+        background-color: #F5F5F5;
+        box-sizing:border-box;
+        padding: 0;
+        display: inline-block;
+        width: 100%;
+        border-radius: 5px;
+        color: #777777;
+        li{
+          display: inline-block;
+        }
+        span{
+          color: #ccc;
+        }
+      }
+    }
+  }
+  .mgl_0{
+    margin-left: 0px;
+  }
+  /*------ 页面主体样式 ------*/
+}
+
