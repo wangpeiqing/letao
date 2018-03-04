@@ -23,7 +23,7 @@
                     currentPage:result.page,
                     totalPages:Math.ceil(result.total/result.size),
                     numberOfPages:5,
-                    onPageClicked:function (p) {
+                    onPageClicked:function (event, originalEvent, type,p) {
                         page=p;
                         //页码点击时出发
                         getUsers(page);
