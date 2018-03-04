@@ -3,19 +3,85 @@
 @import "extend";
 @import "base";
 
-body,html{
+body, html {
   height: 100%;
 }
-.body_bg{
+
+.body_bg {
   background-color: #222D32;
 }
-.mgt_150{
+
+.mgt_150 {
   margin-top: 150px;
 }
 
-table{
-  th,td{
+table {
+  th, td {
     text-align: center;
     vertical-align: middle;
+  }
+}
+
+.page_aside {
+  background-color: #222D32;
+  width: 180px;
+  height: 100%;
+
+  .title {
+    height: 50px;
+    line-height: 50px;
+    font-size: 24px;
+    text-align: center;
+    background-color: #367FA9;
+    color: #fff;
+  }
+  .user {
+    width: 180px;
+    height: 150px;
+    img {
+      display: block;
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      margin: 30px auto 0;
+    }
+  }
+  ul {
+    padding: 0;
+    li {
+      line-height: 40px;
+      a {
+        color: #ccc;
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding-left: 30px;
+        border: 3px solid transparent;
+      }
+    }
+    li.parent {
+      a.current {
+        border-left: 3px solid transparent;
+        background-color: transparent;
+
+      }
+      ul {
+        li.child {
+          a {
+            padding-left: 60px;
+          }
+          a.current {
+            border-left: 3px solid #069;
+            background-color: #1D1F21;
+          }
+        }
+      }
+    }
+    li {
+      a.current {
+        border-left: 3px solid #069;
+        background-color: #1D1F21;
+      }
+    }
   }
 }

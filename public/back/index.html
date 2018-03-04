@@ -5,12 +5,60 @@
     <title>乐淘后台管理</title>
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/bootstrap-validator/css/bootstrapValidator.min.css">
+    <link rel="stylesheet" href="./lib/nprogress/nprogress.css">
 </head>
 <body>
-后台管理
+<div class="pull-left page_aside">
+    <div class="title">
+        后台管理
+    </div>
+    <div class="user">
+        <img src="./images/default.jpg" alt="">
+    </div>
+    <div>
+        <ul>
+            <li>
+                <a href="javascript:void(0);">
+                    <span class="glyphicon glyphicon-user"></span>
+                    用户管理
+                </a>
+            </li>
+            <li class="parent">
+                <a href="javascript:void(0);">
+                    <span class="glyphicon glyphicon-list"></span>
+                    分类管理
+                </a>
+                <ul style="display: none">
+                    <li class="child">
+                        <a href="javascript:void(0);">
+                            一级分类
+                        </a>
+                    </li>
+                    <li class="child">
+                        <a href="javascript:void(0);">
+                            二级分类
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <span class="glyphicon glyphicon-tags"></span>
+                    商品管理
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="pull-left">
+
+</div>
 </body>
-<script src="./lib/jquery/jquery-1.12.2.js" ></script>
-<script src="./lib/bootstrap/js/bootstrap.min.js" ></script>
-<script src="./js/common.js" ></script>
-<script src="./js/index.js" ></script>
+<script src="./lib/jquery/jquery-1.12.2.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+<script src="./lib/nprogress/nprogress.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/index.js"></script>
 </html>
