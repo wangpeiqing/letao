@@ -32,9 +32,12 @@
             //如果点击的是父级菜单,执行展开或者收缩操作
             $(this).next().slideToggle();
         } else {
-            //否则执行切换选中样式操作
+            //否则执行切换页面操作
+            //切换样式
             $(".page_aside li a").removeClass('current');
             $(this).addClass('current');
+            //加载页面
+            $(".page_main .main").load($(this).data('href'));
         }
     })
 

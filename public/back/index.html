@@ -10,10 +10,13 @@
 </head>
 <body>
 <div class="page_container">
+    <!--侧边栏-->
     <div class="pull-left page_aside">
-        <div class="title">
-            后台管理
-        </div>
+        <a href="index.html">
+            <div class="title">
+                后台管理
+            </div>
+        </a>
         <div class="user">
             <img src="./images/default.jpg" alt="">
             <p>超级管理员</p>
@@ -21,7 +24,7 @@
         <div>
             <ul>
                 <li>
-                    <a href="javascript:void(0);">
+                    <a href="javascript:void(0);" data-href="user.html">
                         <span class="glyphicon glyphicon-user"></span>
                         用户管理
                     </a>
@@ -33,19 +36,19 @@
                     </a>
                     <ul style="display: none">
                         <li class="child">
-                            <a href="javascript:void(0);">
+                            <a href="javascript:void(0);" data-href="first.html">
                                 一级分类
                             </a>
                         </li>
                         <li class="child">
-                            <a href="javascript:void(0);">
+                            <a href="javascript:void(0);" data-href="second.html">
                                 二级分类
                             </a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="javascript:void(0);">
+                    <a href="javascript:void(0);" data-href="product.html">
                         <span class="glyphicon glyphicon-tags"></span>
                         商品管理
                     </a>
@@ -53,6 +56,8 @@
             </ul>
         </div>
     </div>
+    <!--侧边栏-->
+
     <div class="page_main">
         <div class="head">
             <div class="menu_icon pull-left">
@@ -78,7 +83,9 @@
                     首页
                 </li>
             </ul>
-            <div>11111</div>
+            <div class="main">
+
+            </div>
         </div>
     </div>
 </div>
@@ -88,7 +95,8 @@
     <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
                 <h4 class="modal-title">温馨提示</h4>
             </div>
             <div class="modal-body">
@@ -107,6 +115,8 @@
 <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
 <script src="./lib/nprogress/nprogress.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
 <script src="./js/common.js"></script>
 <script src="./js/index.js"></script>
 </html>
