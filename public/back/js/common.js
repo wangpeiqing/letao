@@ -1,5 +1,19 @@
 ;$(function () {
-    //禁用刷新环
+    //检测用户是否登录
+    if (window.location.href.indexOf("login.html")==-1) {
+        $.ajax({
+            url: '/employee/checkRootLogin',
+            type: 'get',
+            success: function (info) {
+                console.log(info);
+                if (info.error == 400) {
+                    window.location.href = "login.html";
+                }
+            }
+        })
+    }
+
+    //进度条禁用刷新环
     NProgress.configure({
         showSpinner: false
     })
@@ -23,7 +37,28 @@
             $(this).addClass('current');
         }
     })
-    // $(".page_aside li.parent a").on('click', function () {
-    //     $(this).next().slideToggle();
-    // })
+
+    //点击隐藏左侧aside
+    $(".menu_icon").on('click', function () {
+        $(".page_aside").toggleClass('aside_hide');
+        $(".page_main").toggleClass('mgl_0');
+    })
+
+    //显示退出模态框
+    $(".quit_icon").on('click', function () {
+        $('#quit').modal('show');
+    })
+    //退出后台管理系统
+    $("#quit_confirm").on('click', function () {
+        $.ajax({
+            url: '/employee/employeeLogout',
+            type: 'get',
+            success: function (info) {
+                if (info.success) {
+                    window.location.href = "login.html";
+                }
+            }
+        })
+    })
+
 })
