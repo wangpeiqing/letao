@@ -37,7 +37,7 @@
             $(".page_aside li a").removeClass('current');
             $(this).addClass('current');
             //加载页面
-            $(".page_main .main").load($(this).data('href'));
+            $(".page_main .page_info").load($(this).data('href'));
         }
     })
 
