@@ -3,8 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="./css/common.css">
 </head>
 <body>
+<div class="head">
+    <div class="home">
+        <a href="javascript:history.go(-1);">
+            <span class="mui-icon mui-icon-back"></span>
+        </a>
+    </div>
+    <div class="search">
+        <a href="javascript:void(0);">
+            <span class="fa fa-search"></span>
+        </a>
+    </div>
+</div>
+<div class="category_main">
+    <div class="category_title">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <ul>
 
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="category_detail ">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <ul class="mui-clearfix ">
+                    <li>
+                        <img src="./images/brand1.png" alt="">
+                        <p>阿迪达斯</p>
+                    </li>
+                    <li>
+                        <img src="./images/brand1.png" alt="">
+                        <p>阿迪达斯</p>
+                    </li>
+                    <li>
+                        <img src="./images/brand1.png" alt="">
+                        <p>阿迪达斯</p>
+                    </li>
+                    <li>
+                        <img src="./images/brand1.png" alt="">
+                        <p>阿迪达斯</p>
+                    </li>
+                    <li>
+                        <img src="./images/brand1.png" alt="">
+                        <p>阿迪达斯</p>
+                    </li>
+                    <li>
+                        <img src="./images/brand1.png" alt="">
+                        <p>阿迪达斯</p>
+                    </li>
+                    <li>
+                        <img src="./images/brand1.png" alt="">
+                        <p>阿迪达斯</p>
+                    </li>
+                    <li>
+                        <img src="./images/brand1.png" alt="">
+                        <p>阿迪达斯</p>
+                    </li>
+                    <li>
+                        <img src="./images/brand1.png" alt="">
+                        <p>阿迪达斯</p>
+                    </li>
+                    <li>
+                        <img src="./images/brand1.png" alt="">
+                        <p>阿迪达斯</p>
+                    </li>
+                    <li>
+                        <img src="./images/brand1.png" alt="">
+                        <p>阿迪达斯</p>
+                    </li>
+                    <li>
+                        <img src="./images/brand1.png" alt="">
+                        <p>阿迪达斯</p>
+                    </li>
+                    <li>
+                        <img src="./images/brand1.png" alt="">
+                        <p>阿迪达斯</p>
+                    </li>
+                    <li>
+                        <img src="./images/brand1.png" alt="">
+                        <p>阿迪达斯</p>
+                    </li>
+                    <li>
+                        <img src="./images/brand1.png" alt="">
+                        <p>阿迪达斯</p>
+                    </li>
+                    <li>
+                        <img src="./images/brand1.png" alt="">
+                        <p>阿迪达斯</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="home">
+        <a href="index.html">
+            <span class="fa fa-home"></span>
+            <br>
+            首页
+        </a>
+    </div>
+    <div class="category current">
+        <a href="category.html">
+            <span class="fa fa-bars"></span>
+            <br>
+            分类
+        </a>
+    </div>
+    <div class="cart">
+        <a href="javascript:void(0);">
+            <span class="fa fa-shopping-cart"></span>
+            <br>
+            购物车
+        </a>
+    </div>
+    <div class="user">
+        <a href="javascript:void(0);">
+            <span class="fa fa-user"></span>
+            <br>
+            会员中心
+        </a>
+    </div>
+</div>
 </body>
+<script type="text/html" id="detail">
+    {{if rows.length==0}}
+    <span>该分类下没有更多的品牌信息</span>
+    {{/if}}
+    {{each rows value index}}
+    <li data-id="{{value.id}}">
+        <a href="javascript:void(0);">
+            <img src="{{value.brandLogo}}" alt="">
+            <p>{{value.brandName}}</p>
+        </a>
+    </li>
+    {{/each}}
+</script>
+<script type="text/html" id="title">
+    {{each rows value index}}
+    <li class="{{index==0?'current':''}}" data-id="{{value.id}}">
+        <a href="javascript:void(0);">
+            {{value.categoryName}}
+        </a>
+    </li>
+    {{/each}}
+</script>
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/mui/js/mui.min.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/category.js"></script>
 </html>
