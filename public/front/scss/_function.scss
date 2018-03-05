@@ -1,0 +1,10 @@
+//px单位转rem    $px:准备转换的px   $base_px:px转换成rem的基础单位
+@function px2rem($px,$base_px:32px){
+  @if (unit($px)==rem) {
+    @return $px;
+  }
+  @else if (unitless($px)){
+    @return px2rem($px+0px);
+  }
+  @return $px / $base_px * 1rem;
+}

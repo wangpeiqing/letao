@@ -1,0 +1,18 @@
+//多行文字省略号
+@mixin textCut($num:2){
+  overflow:hidden;
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:$num;
+}
+//X轴居中
+@mixin centerX{
+  left: 50%;
+  transform: translateX(-50%);
+}
+//Y轴居中
+@mixin centerY{
+  top: 50%;
+  transform: translateY(-50%);
+}
