@@ -57,12 +57,12 @@
         <td>{{(page-1)*size+i+1}}</td>
         <td>{{v.username}}</td>
         <td>{{v.mobile}}</td>
-        <td>{{v.isDelete==1?'禁用':'启用'}}</td>
+        <td>{{v.isDelete==1?'启用':'禁用'}}</td>
         <td>
             {{if v.isDelete==1}}
-            <button class="btn btn-success btn-sm">启用</button>
+            <button class="btn btn-danger btn-sm disable" data-id="{{v.id}}">禁用</button>
             {{else}}
-            <button class="btn btn-danger btn-sm">禁用</button>
+            <button class="btn btn-success btn-sm enable" data-id="{{v.id}}">启用</button>
             {{/if}}
         </td>
     </tr>
