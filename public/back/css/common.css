@@ -206,7 +206,10 @@ body, html {
 
 table th, table td {
   text-align: center;
-  vertical-align: middle; }
+  vertical-align: middle !important; }
+
+form img {
+  margin: 15px 5px 15px 0; }
 
 .page_container {
   width: 100%;
@@ -303,7 +306,7 @@ table th, table td {
             display: inline-block; }
           .page_container .page_main .page_info .nav ul span {
             color: #ccc; }
-      .page_container .page_main .page_info .first_content .main button {
+      .page_container .page_main .page_info .first_content .main button, .page_container .page_main .page_info .second_content .main button {
         margin-bottom: 20px; }
   .page_container .mgl_0 {
     margin-left: 0px; }

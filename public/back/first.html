@@ -77,7 +77,7 @@
     <!--模板-->
     <script type="text/html" id="topCategory">
         {{each rows v i}}
-        <tr data-id="{{v.id}}">
+        <tr data-id={{v.id}}>
             <td>{{(page-1)*size+i+1}}</td>
             <td>{{v.categoryName}}</td>
         </tr>

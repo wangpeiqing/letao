@@ -34,7 +34,7 @@
     //显示添加模板
     $(".btn_add").on('click', function () {
         $("#operation").modal('show');
-        $('#operation').on('shown.bs.modal', function () {
+        $('#operation').on('hide.bs.modal', function () {
             $('form').data('bootstrapValidator').resetForm();
         })
     })
