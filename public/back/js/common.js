@@ -5,7 +5,7 @@
             url: '/employee/checkRootLogin',
             type: 'get',
             success: function (info) {
-                console.log(info);
+                // console.log(info);
                 if (info.error == 400) {
                     window.location.href = "login.html";
                 }
@@ -38,6 +38,7 @@
             $(this).addClass('current');
             //加载页面
             $(".page_main .page_info").load($(this).data('href'));
+            $.getScript('js/'+ $(this).data('js'));
         }
     })
 

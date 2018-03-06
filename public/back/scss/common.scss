@@ -125,7 +125,7 @@ table {
       }
     }
 
-    .container-fluid {
+    .page_info {
       .nav {
         display: inline-block;
         width: 100%;
@@ -137,6 +137,7 @@ table {
           width: 100%;
           border-radius: 5px;
           color: #777777;
+          margin-bottom: 20px;
           li {
             display: inline-block;
           }
@@ -145,9 +146,14 @@ table {
           }
         }
       }
-
-      .main{
-
+      
+      /*------ 一级分类 ------*/
+      .first_content{
+        .main{
+          button{
+            margin-bottom: 20px;
+          }
+        }
       }
     }
   }
