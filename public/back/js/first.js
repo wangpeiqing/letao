@@ -1,4 +1,6 @@
 ;$(function () {
+    var page = 1;
+    var pageSize = 5;
     //获取一级分类
     function getTopCategory(page, pageSize) {
         var page = page || 1;
@@ -14,6 +16,16 @@
                 console.log(info);
                 var tem = template('topCategory', info);
                 $("table tbody").html(tem);
+                //渲染分页
+                $("#pagination").bootstrapPaginator({
+                    bootstrapMajorVersion:3,
+                    currentPage:page,
+                    numberOfPages:3,
+                    totalPages:Math.ceil(info.total/info.size),
+                    onPageClicked:function (e,originalEvent,type,page) {
+                        getTopCategory(page,pageSize);
+                    }
+                })
             }
         })
     }
@@ -66,4 +78,6 @@
             })
         })
     })
+
+
 })
