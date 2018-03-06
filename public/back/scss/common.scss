@@ -18,11 +18,12 @@ body, html {
 table {
   th, td {
     text-align: center;
-    vertical-align: middle!important;
+    vertical-align: middle !important;
   }
 }
-form{
-  img{
+
+form {
+  img {
     margin: 15px 5px 15px 0;
   }
 }
@@ -151,15 +152,31 @@ form{
           }
         }
       }
-      
+
       /*------ 一级分类 ------*/
-      .first_content,.second_content{
-        .main{
-          button{
+      .first_content, .second_content, .product_content {
+        .main {
+          button {
             margin-bottom: 20px;
+          }
+          table {
+            button {
+              margin-bottom: 0;
+            }
           }
         }
       }
+
+      .product_content {
+        #category {
+          @extend .clearfix;
+          .dropdown {
+            float: left;
+            margin-right: 15px;
+          }
+        }
+      }
+
     }
   }
   .mgl_0 {

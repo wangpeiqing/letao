@@ -104,10 +104,10 @@
     </div><!-- /.modal -->
 
     <!--模板-->
-    <script type="text/html" id="secondCategory">
+    <script type="text/html" id="secondTem">
         {{each rows v i}}
-        <tr data-id={{v.id}}>
-            <td>{{(page-1)*size+i+1}}</td>
+        <tr data-id='{{v.id}}' >
+            <td>{{ (page-1)*size+i+1 }}</td>
             <td>{{v.categoryName}}</td>
             <td>{{v.brandName}}</td>
             <td><img src="{{v.brandLogo}}" height="50px" alt=""></td>
@@ -115,9 +115,9 @@
         {{/each}}
     </script>
 
-    <script type="text/html" id="topCategory">
+    <script type="text/html" id="second_topCategory">
         {{each rows value index}}
-        <li data-id="{{value.id}}"><a href="javascript:void(0);">{{value.categoryName}}</a></li>
+        <li data-id='{{value.id}}' ><a href="javascript:void(0);">{{value.categoryName}}</a></li>
         {{/each}}
     </script>
 </div>

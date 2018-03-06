@@ -20,9 +20,26 @@
                 //渲染分页
                 $("#pagination").bootstrapPaginator({
                     bootstrapMajorVersion: 3,
-                    currentPage: result.page,
-                    totalPages: Math.ceil(result.total / result.size),
-                    numberOfPages: 5,
+                    // currentPage:1,
+                    numberOfPages: pageSize,
+                    totalPages: Math.ceil(info.total / info.size),
+                    itemTexts:function (type, page, current){
+                        switch (type) {
+                            case 'first':
+                                return '首页';
+                            case 'prev':
+                                return '上一页';
+                            case 'next':
+                                return '下一页';
+                            case 'last':
+                                return '尾页';
+                            case 'page':
+                                return page;
+                        }
+                    },
+                    tooltipTitles:function (type, page, current){
+                        return '';
+                    },
                     onPageClicked: function (event, originalEvent, type, p) {
                         currentPage = p;
                         //页码点击时出发

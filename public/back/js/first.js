@@ -13,15 +13,33 @@
                 pageSize: pageSize
             },
             success: function (info) {
-                console.log(info);
-                var tem = template('topCategory', info);
+                // console.log(info);
+                var tem = template('firstTem', info);
+                // console.log(tem);
                 $("table tbody").html(tem);
                 //渲染分页
                 $("#pagination").bootstrapPaginator({
-                    bootstrapMajorVersion:3,
-                    currentPage:page,
-                    numberOfPages:3,
-                    totalPages:Math.ceil(info.total/info.size),
+                    bootstrapMajorVersion: 3,
+                    // currentPage:1,
+                    numberOfPages: pageSize,
+                    totalPages: Math.ceil(info.total / info.size),
+                    itemTexts:function (type, page, current){
+                        switch (type) {
+                            case 'first':
+                                return '首页';
+                            case 'prev':
+                                return '上一页';
+                            case 'next':
+                                return '下一页';
+                            case 'last':
+                                return '尾页';
+                            case 'page':
+                                return page;
+                        }
+                    },
+                    tooltipTitles:function (type, page, current){
+                        return '';
+                    },
                     onPageClicked:function (e,originalEvent,type,page) {
                         getTopCategory(page,pageSize);
                     }

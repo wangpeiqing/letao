@@ -10,7 +10,8 @@ function getSecondCategory(page, pageSize) {
         type: 'get',
         data: {page: page, pageSize: pageSize},
         success: function (info) {
-            var tem = template('secondCategory', info);
+            var tem = template('secondTem', info);
+            // console.log(tem);
             $("table tbody").html(tem);
 
             //渲染分页
@@ -19,6 +20,23 @@ function getSecondCategory(page, pageSize) {
                 // currentPage:1,
                 numberOfPages: pageSize,
                 totalPages: Math.ceil(info.total / info.size),
+                itemTexts:function (type, page, current){
+                    switch (type) {
+                        case 'first':
+                            return '首页';
+                        case 'prev':
+                            return '上一页';
+                        case 'next':
+                            return '下一页';
+                        case 'last':
+                            return '尾页';
+                        case 'page':
+                            return page;
+                    }
+                },
+                tooltipTitles:function (type, page, current){
+                    return '';
+                },
                 onPageClicked: function (e, originalEvent, type, page) {
                     getSecondCategory(page, pageSize);
                 }
@@ -40,8 +58,9 @@ $(".btn_add").on('click', function () {
             pageSize: 100
         },
         success: function (info) {
-            console.log(info);
-            var tem = template('topCategory', info);
+            // console.log(info);
+            var tem = template('second_topCategory', info);
+            // console.log(tem);
             $("ul.dropdown-menu").html(tem);
         }
     })

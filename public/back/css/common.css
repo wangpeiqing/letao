@@ -177,8 +177,9 @@ td,
 th {
   padding: 0; }
 
-.clearfix::before,
-.clearfix::after {
+.clearfix::before, .page_container .page_main .page_info .product_content #category::before,
+.clearfix::after,
+.page_container .page_main .page_info .product_content #category::after {
   content: "";
   display: block;
   visibility: hidden;
@@ -306,8 +307,13 @@ form img {
             display: inline-block; }
           .page_container .page_main .page_info .nav ul span {
             color: #ccc; }
-      .page_container .page_main .page_info .first_content .main button, .page_container .page_main .page_info .second_content .main button {
+      .page_container .page_main .page_info .first_content .main button, .page_container .page_main .page_info .second_content .main button, .page_container .page_main .page_info .product_content .main button {
         margin-bottom: 20px; }
+      .page_container .page_main .page_info .first_content .main table button, .page_container .page_main .page_info .second_content .main table button, .page_container .page_main .page_info .product_content .main table button {
+        margin-bottom: 0; }
+      .page_container .page_main .page_info .product_content #category .dropdown {
+        float: left;
+        margin-right: 15px; }
   .page_container .mgl_0 {
     margin-left: 0px; }
 
