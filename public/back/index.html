@@ -24,7 +24,7 @@
         <div>
             <ul>
                 <li>
-                    <a href="javascript:void(0);" data-href="user.html">
+                    <a href="javascript:void(0);" data-href="user.html" data-js="user.js">
                         <span class="glyphicon glyphicon-user"></span>
                         用户管理
                     </a>
@@ -36,19 +36,19 @@
                     </a>
                     <ul style="display: none">
                         <li class="child">
-                            <a href="javascript:void(0);" data-href="first.html">
+                            <a href="javascript:void(0);" data-href="first.html .first_content" data-js="first.js">
                                 一级分类
                             </a>
                         </li>
                         <li class="child">
-                            <a href="javascript:void(0);" data-href="second.html">
+                            <a href="javascript:void(0);" data-href="second.html" data-js="second.js">
                                 二级分类
                             </a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="javascript:void(0);" data-href="product.html">
+                    <a href="javascript:void(0);" data-href="product.html" data-js="product.js">
                         <span class="glyphicon glyphicon-tags"></span>
                         商品管理
                     </a>
@@ -71,18 +71,20 @@
                 </a>
             </div>
         </div>
-        <div class="container-fluid">
-            <ul class="clearfix">
-                <li>
-                    <a href="javascript:void(0);">
-                        管理系统
-                    </a>
-                </li>
-                <span>&nbsp/&nbsp</span>
-                <li>
-                    首页
-                </li>
-            </ul>
+        <div class="container-fluid page_info">
+            <div class="nav">
+                <ul class="clearfix">
+                    <li>
+                        <a href="index.html">
+                            管理系统
+                        </a>
+                    </li>
+                    <span>&nbsp/&nbsp</span>
+                    <li>
+                        首页
+                    </li>
+                </ul>
+            </div>
             <div class="main">
 
             </div>
@@ -112,11 +114,11 @@
 
 </body>
 <script src="./lib/jquery/jquery-1.12.2.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
 <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
-<script src="./lib/nprogress/nprogress.js"></script>
-<script src="./lib/artTemplate/template-web.js"></script>
 <script src="./lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
+<script src="./lib/nprogress/nprogress.js"></script>
 <script src="./js/common.js"></script>
 <script src="./js/index.js"></script>
 </html>
