@@ -30,17 +30,7 @@
                 <button class="btn_search">搜索</button>
             </div>
             <div class="search_history">
-                <div class="title mui-clearfix">
-                    <div class="history">
-                        <span>历史记录</span>
-                    </div>
-                    <div class="btn_empty">
-                        <span class="fa fa-trash">清空历史记录</span>
-                    </div>
-                </div>
-                <ul>
-                    <!--查询历史模板-->
-                </ul>
+                <!--查询历史模板-->
             </div>
         </div>
     </div>
@@ -79,14 +69,29 @@
 
 <!--查询历史模板-->
 <script type="text/html" id="search_history">
-    {{each arr v i}}
-    <li >
-        <a href="searchList.html?key={{v}}" data-index="{{i}}">
-            {{v}}
-        </a>
-        <span class="mui-icon mui-icon-closeempty mui-pull-right btn_delete"></span>
-    </li>
-    {{/each}}
+    {{if arr.length==0}}
+    <p>没有查询到历史信息</p>
+    {{else}}
+    <div class="title mui-clearfix">
+        <div class="history">
+            <span>历史记录</span>
+        </div>
+        <div class="btn_empty">
+            <span class="fa fa-trash">清空历史记录</span>
+        </div>
+    </div>
+    <ul>
+        {{each arr v i}}
+        <li>
+            <a href="searchList.html?key={{v}}" data-index="{{i}}">
+                {{v}}
+            </a>
+            <span class="mui-icon mui-icon-closeempty mui-pull-right btn_delete"></span>
+        </li>
+        {{/each}}
+    </ul>
+    {{/if}}
+
 </script>
 <!--查询历史模板-->
 

@@ -21,8 +21,8 @@
                 $("#pagination").bootstrapPaginator({
                     bootstrapMajorVersion: 3,
                     // currentPage:1,
-                    numberOfPages: pageSize,
-                    totalPages: Math.ceil(info.total / info.size),
+                    numberOfPages: pagesize,
+                    totalPages: Math.ceil(result.total / result.size),
                     itemTexts:function (type, page, current){
                         switch (type) {
                             case 'first':

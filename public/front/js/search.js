@@ -6,7 +6,7 @@
     //渲染查询历史
     function render_history(history_arr){
         var tem = template('search_history',{arr:history_arr});
-        $(".search_history ul").html(tem);
+        $(".search_history").html(tem);
     }
 
     //从localStorage获取查询历史并转换成数组

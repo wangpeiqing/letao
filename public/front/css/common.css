@@ -306,7 +306,8 @@ ul {
         border: 1px solid #ccc;
         margin-bottom: 10px; }
         .index_main .products ul li img {
-          width: 100%; }
+          max-width: 100%;
+          height: 209px; }
         .index_main .products ul li p {
           overflow: hidden;
           text-overflow: ellipsis;
@@ -431,54 +432,91 @@ ul {
 
 /*------ search搜索页主体 ------*/
 /*------ searchList样式 ------*/
-.searchList_main .sort {
-  padding: 10px 0; }
-  .searchList_main .sort ul {
-    height: 30px;
-    padding: 0 10px;
-    background-color: #eee; }
-    .searchList_main .sort ul li {
-      float: left;
-      width: 25%;
+.searchList_main {
+  height: 100%;
+  position: relative; }
+  .searchList_main .search {
+    padding: 10px;
+    position: relative; }
+    .searchList_main .search .text_search {
+      height: 34px;
+      font-size: 12px;
+      border: 1px solid #007AFF;
+      border-radius: 5px;
+      margin: 0; }
+    .searchList_main .search .btn_search {
+      position: absolute;
+      background-color: #007AFF;
+      border-radius: 0 5px 5px 0;
+      right: 10px;
+      top: 10px;
+      color: #fff;
+      font-size: 14px;
+      border: none; }
+  .searchList_main .sort {
+    padding: 10px 0; }
+    .searchList_main .sort ul {
       height: 30px;
-      line-height: 30px;
-      text-align: center;
-      color: #666; }
-      .searchList_main .sort ul li P {
-        margin: 0; }
-.searchList_main .products {
-  padding: 10px;
-  text-align: center; }
-  .searchList_main .products ul {
-    padding: 0;
-    margin: 0; }
-    .searchList_main .products ul li {
-      width: 48%;
-      padding: 10px;
-      float: left;
-      border: 1px solid #ccc;
-      margin-bottom: 10px; }
-      .searchList_main .products ul li img {
-        width: 100%; }
-      .searchList_main .products ul li p {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2; }
-      .searchList_main .products ul li span:first-child {
-        color: red;
-        margin: 0 5px; }
-      .searchList_main .products ul li span:last-child {
-        color: #ccc;
-        text-decoration: line-through; }
-      .searchList_main .products ul li button {
-        background-color: #007AFF;
-        color: #fff;
-        font-size: 14px; }
-    .searchList_main .products ul li:nth-child(odd) {
-      margin-right: 4%; }
-
+      padding: 0 10px;
+      background-color: #eee; }
+      .searchList_main .sort ul li {
+        float: left;
+        width: 25%;
+        height: 30px;
+        line-height: 30px;
+        text-align: center; }
+        .searchList_main .sort ul li P {
+          color: #666;
+          margin: 0; }
+      .searchList_main .sort ul li.current p {
+        color: darkorange; }
+  .searchList_main .products {
+    padding: 10px;
+    text-align: center; }
+    .searchList_main .products ul {
+      padding: 0;
+      margin: 0; }
+      .searchList_main .products ul li {
+        width: 48%;
+        padding: 10px;
+        float: left;
+        border: 1px solid #ccc;
+        margin-bottom: 10px; }
+        .searchList_main .products ul li img {
+          max-width: 100%;
+          height: 209px; }
+        .searchList_main .products ul li p {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2; }
+        .searchList_main .products ul li span:first-child {
+          color: red;
+          margin: 0 5px; }
+        .searchList_main .products ul li span:last-child {
+          color: #ccc;
+          text-decoration: line-through; }
+        .searchList_main .products ul li button {
+          background-color: #007AFF;
+          color: #fff;
+          font-size: 14px; }
+      .searchList_main .products ul li:nth-child(odd) {
+        margin-right: 4%; }
+    .searchList_main .products .loading {
+      width: 40px;
+      height: 40px;
+      border: 3px solid #007AFF;
+      position: absolute;
+      left: 50%;
+      top: 250px;
+      transform: translate(-50%, -50%);
+      animation: divRotate 1s infinite ease-in-out; }
+@keyframes divRotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg); }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg); } }
 /*------ searchList样式 ------*/
 
 /*# sourceMappingURL=common.css.map */

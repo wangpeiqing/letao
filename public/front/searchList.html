@@ -22,7 +22,7 @@
         </a>
     </div>
 </div>
-<div class="search_main">
+<div class="searchList_main">
     <div class="mui-scroll-wrapper">
         <div class="mui-scroll">
             <div class="search">
@@ -34,10 +34,10 @@
                     <li>
                         <p>上架时间 <span class="fa fa-angle-down"></span></p>
                     </li>
-                    <li>
-                        <p>价格 <span class="fa fa-angle-down"></span></p>
+                    <li class="parameter" data-key="price" >
+                        <p >价格 <span class="fa fa-angle-down"></span></p>
                     </li>
-                    <li>
+                    <li class="parameter" data-key="num" >
                         <p>库存 <span class="fa fa-angle-down"></span></p>
                     </li>
                     <li>
@@ -47,66 +47,8 @@
             </div>
             <div class="products">
                 <ul>
-                    <li>
-                        <a href="javascript:void(0);">
-                            <div>
-                                <img src="images/product.jpg" alt="">
-                                <p>adidas阿迪达斯 男式 场下休闲篮球鞋S83700场下休闲篮球鞋S83700 </p>
-                                <p>
-                                    <span class="price">&yen;560</span>
-                                    <span class="oldPrice">&yen;580</span>
-                                </p>
-                                <button>
-                                    立即购买
-                                </button>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0);">
-                            <div>
-                                <img src="images/product.jpg" alt="">
-                                <p>adidas阿迪达斯 男式 场下休闲篮球鞋S83700场下休闲篮球鞋S83700 </p>
-                                <p>
-                                    <span class="price">&yen;560</span>
-                                    <span class="oldPrice">&yen;580</span>
-                                </p>
-                                <button>
-                                    立即购买
-                                </button>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0);">
-                            <div>
-                                <img src="images/product.jpg" alt="">
-                                <p>adidas阿迪达斯 男式 场下休闲篮球鞋S83700场下休闲篮球鞋S83700 </p>
-                                <p>
-                                    <span class="price">&yen;560</span>
-                                    <span class="oldPrice">&yen;580</span>
-                                </p>
-                                <button>
-                                    立即购买
-                                </button>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0);">
-                            <div>
-                                <img src="images/product.jpg" alt="">
-                                <p>adidas阿迪达斯 男式 场下休闲篮球鞋S83700场下休闲篮球鞋S83700 </p>
-                                <p>
-                                    <span class="price">&yen;560</span>
-                                    <span class="oldPrice">&yen;580</span>
-                                </p>
-                                <button>
-                                    立即购买
-                                </button>
-                            </div>
-                        </a>
-                    </li>
+                    <!--产品模板-->
+                    <div class="loading"></div>
                 </ul>
             </div>
         </div>
@@ -143,6 +85,31 @@
     </div>
 </div>
 </body>
+<!--产品模板-->
+<script type="text/html" id="product">
+    {{if data.length==0}}
+    <p>没有查询到相关产品</p>
+    {{/if}}
+
+    {{each data v i}}
+    <li data-id="{{v.id}}">
+        <a href="javascript:void(0);">
+            <div>
+                <img src="{{v.pic[0].picAddr}}" alt="">
+                <p>{{v.proName}} </p>
+                <p>
+                    <span class="price">&yen;{{v.price}}</span>
+                    <span class="oldPrice">&yen;{{v.oldPrice}}</span>
+                </p>
+                <button>
+                    立即购买
+                </button>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+<!--产品模板-->
 <script src="./lib/zepto/zepto.min.js"></script>
 <script src="./lib/artTemplate/template-web.js"></script>
 <script src="./lib/mui/js/mui.min.js"></script>

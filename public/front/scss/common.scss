@@ -264,6 +264,30 @@ ul {
 
 /*------ searchList样式 ------*/
 .searchList_main{
+  height: 100%;
+  position: relative;
+  .search {
+    padding: 10px;
+    position: relative;
+    .text_search {
+      height: 34px;
+      font-size: 12px;
+      border: 1px solid #007AFF;
+      border-radius: 5px;
+      //text-indent: 10px;
+      margin: 0;
+    }
+    .btn_search {
+      position: absolute;
+      background-color: #007AFF;
+      border-radius: 0 5px 5px 0;
+      right: 10px;
+      top: 10px;
+      color: #fff;
+      font-size: 14px;
+      border: none;
+    }
+  }
   .sort {
     padding: 10px 0;
     ul {
@@ -276,9 +300,15 @@ ul {
         height: 30px;
         line-height: 30px;
         text-align: center;
-        color: #666;
         P {
+          color: #666;
           margin: 0;
+        }
+
+      }
+      li.current{
+        p{
+          color: darkorange;
         }
       }
     }
@@ -286,6 +316,24 @@ ul {
   }
   .products {
     @include products;
+    .loading{
+      width: 40px;
+      height: 40px;
+      border: 3px solid #007AFF;
+      position: absolute;
+      left: 50%;
+      top: 250px;
+      transform: translate(-50%,-50%);
+      animation: divRotate 1s infinite ease-in-out;
+    }
+  }
+  @keyframes divRotate {
+    from{
+      transform: translate(-50%,-50%) rotate(0deg);
+    }
+    to{
+      transform: translate(-50%,-50%) rotate(360deg);
+    }
   }
 }
 /*------ searchList样式 ------*/
