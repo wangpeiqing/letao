@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+</head>
+<body>
+<div class="head">
+    <div class="home">
+        <a href="javascript:history.go(-1);">
+            <span class="mui-icon mui-icon-back"></span>
+        </a>
+    </div>
+    <span>搜索中心</span>
+    <div class="search">
+        <a href="search.html">
+            <!--<span class="fa fa-search"></span>-->
+        </a>
+    </div>
+</div>
+<div class="search_main">
+    <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+            <div class="search">
+                <input type="text" name="" id="" class="text_search" placeholder="请输入搜索关键字">
+                <button class="btn_search">搜索</button>
+            </div>
+            <div class="search_history">
+                <div class="title mui-clearfix">
+                    <div class="history">
+                        <span>历史记录</span>
+                    </div>
+                    <div class="btn_empty">
+                        <span class="fa fa-trash">清空历史记录</span>
+                    </div>
+                </div>
+                <ul>
+                    <!--查询历史模板-->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="home">
+        <a href="index.html">
+            <span class="fa fa-home"></span>
+            <br>
+            首页
+        </a>
+    </div>
+    <div class="category">
+        <a href="category.html">
+            <span class="fa fa-bars"></span>
+            <br>
+            分类
+        </a>
+    </div>
+    <div class="cart">
+        <a href="javascript:void(0);">
+            <span class="fa fa-shopping-cart"></span>
+            <br>
+            购物车
+        </a>
+    </div>
+    <div class="user">
+        <a href="javascript:void(0);">
+            <span class="fa fa-user"></span>
+            <br>
+            会员中心
+        </a>
+    </div>
+</div>
+</body>
+
+<!--查询历史模板-->
+<script type="text/html" id="search_history">
+    {{each arr v i}}
+    <li >
+        <a href="searchList.html?key={{v}}" data-index="{{i}}">
+            {{v}}
+        </a>
+        <span class="mui-icon mui-icon-closeempty mui-pull-right btn_delete"></span>
+    </li>
+    {{/each}}
+</script>
+<!--查询历史模板-->
+
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/mui/js/mui.min.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/search.js"></script>
+</html>
