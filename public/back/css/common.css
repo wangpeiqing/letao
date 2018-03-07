@@ -307,6 +307,9 @@ form img {
             display: inline-block; }
           .page_container .page_main .page_info .nav ul span {
             color: #ccc; }
+      .page_container .page_main .page_info .main .chart_01, .page_container .page_main .page_info .main .chart_02 {
+        width: 45%;
+        height: 900px; }
       .page_container .page_main .page_info .first_content .main button, .page_container .page_main .page_info .second_content .main button, .page_container .page_main .page_info .product_content .main button {
         margin-bottom: 20px; }
       .page_container .page_main .page_info .first_content .main table button, .page_container .page_main .page_info .second_content .main table button, .page_container .page_main .page_info .product_content .main table button {

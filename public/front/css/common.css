@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;
@@ -176,12 +177,13 @@ td,
 th {
   padding: 0; }
 
-.clearfix::before, .main .nav ul::before, .main .products ul::before, .footer::before, .category_main::before,
+.clearfix::before, .footer::before, .index_main .nav ul::before, .index_main .products ul::before, .category_main::before, .searchList_main .products ul::before,
 .clearfix::after,
-.main .nav ul::after,
-.main .products ul::after,
 .footer::after,
-.category_main::after {
+.index_main .nav ul::after,
+.index_main .products ul::after,
+.category_main::after,
+.searchList_main .products ul::after {
   content: "";
   display: block;
   visibility: hidden;
@@ -212,6 +214,10 @@ ul {
   padding: 0;
   margin: 0; }
 
+.mui-toast-container {
+  bottom: 70px; }
+
+/*------ 头部样式 ------*/
 .head {
   height: 45px;
   line-height: 45px;
@@ -245,53 +251,7 @@ ul {
     width: 100%;
     height: 100%; }
 
-.main {
-  height: 100%;
-  position: relative; }
-  .main .nav {
-    width: 100%;
-    padding: 10px; }
-    .main .nav ul {
-      padding: 0;
-      margin: 0; }
-      .main .nav ul li {
-        float: left;
-        width: 33.3333333333%; }
-        .main .nav ul li img {
-          width: 100%; }
-  .main .products {
-    padding: 10px;
-    text-align: center; }
-    .main .products ul {
-      padding: 0;
-      margin: 0; }
-      .main .products ul li {
-        width: 48%;
-        padding: 10px;
-        float: left;
-        border: 1px solid #ccc;
-        margin-bottom: 10px; }
-        .main .products ul li img {
-          width: 100%; }
-        .main .products ul li p {
-          overflow: hidden;
-          text-overflow: ellipsis;
-          display: -webkit-box;
-          -webkit-box-orient: vertical;
-          -webkit-line-clamp: 2; }
-        .main .products ul li span:first-child {
-          color: red;
-          margin: 0 5px; }
-        .main .products ul li span:last-child {
-          color: #ccc;
-          text-decoration: line-through; }
-        .main .products ul li button {
-          background-color: #007AFF;
-          color: #fff;
-          font-size: 14px; }
-      .main .products ul li:nth-child(odd) {
-        margin-right: 4%; }
-
+/*------ footer样式 ------*/
 .footer {
   height: 55px;
   background-color: #006699;
@@ -318,6 +278,56 @@ ul {
   .footer div.current a {
     color: darkorange; }
 
+/*------ 首页主体 ------*/
+.index_main {
+  height: 100%;
+  position: relative; }
+  .index_main .nav {
+    width: 100%;
+    padding: 10px; }
+    .index_main .nav ul {
+      padding: 0;
+      margin: 0; }
+      .index_main .nav ul li {
+        float: left;
+        width: 33.3333333333%; }
+        .index_main .nav ul li img {
+          width: 100%; }
+  .index_main .products {
+    padding: 10px;
+    text-align: center; }
+    .index_main .products ul {
+      padding: 0;
+      margin: 0; }
+      .index_main .products ul li {
+        width: 48%;
+        padding: 10px;
+        float: left;
+        border: 1px solid #ccc;
+        margin-bottom: 10px; }
+        .index_main .products ul li img {
+          width: 100%; }
+        .index_main .products ul li p {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2; }
+        .index_main .products ul li span:first-child {
+          color: red;
+          margin: 0 5px; }
+        .index_main .products ul li span:last-child {
+          color: #ccc;
+          text-decoration: line-through; }
+        .index_main .products ul li button {
+          background-color: #007AFF;
+          color: #fff;
+          font-size: 14px; }
+      .index_main .products ul li:nth-child(odd) {
+        margin-right: 4%; }
+
+/*------ 首页主体 ------*/
+/*------ 分类页主体 ------*/
 .category_main {
   height: 100%;
   width: 100%; }
@@ -361,7 +371,114 @@ ul {
           height: 100%; }
         .category_main .category_detail ul li img {
           display: inline-block;
-          width: 62px;
+          max-width: 99%;
           height: 62px; }
+
+/*------ 分类页主体 ------*/
+/*------ search搜索页主体 ------*/
+.search_main {
+  height: 100%;
+  position: relative; }
+  .search_main .search {
+    padding: 10px;
+    position: relative; }
+    .search_main .search .text_search {
+      height: 34px;
+      font-size: 12px;
+      border: 1px solid #007AFF;
+      border-radius: 5px;
+      margin: 0; }
+    .search_main .search .btn_search {
+      position: absolute;
+      background-color: #007AFF;
+      border-radius: 0 5px 5px 0;
+      right: 10px;
+      top: 10px;
+      color: #fff;
+      font-size: 14px;
+      border: none; }
+  .search_main .search_history {
+    padding: 10px; }
+    .search_main .search_history .title {
+      font-size: 12px;
+      color: #666;
+      height: 30px;
+      line-height: 30px; }
+      .search_main .search_history .title .history {
+        float: left; }
+      .search_main .search_history .title .btn_empty {
+        float: right; }
+    .search_main .search_history ul {
+      border: 1px dashed red;
+      border-bottom: none; }
+      .search_main .search_history ul li {
+        height: 30px;
+        line-height: 30px;
+        border-bottom: 1px dashed red; }
+        .search_main .search_history ul li a {
+          vertical-align: top;
+          display: inline-block;
+          color: #007AFF;
+          font-size: 12px;
+          text-indent: 10px;
+          width: 60%; }
+        .search_main .search_history ul li span {
+          display: inline-block;
+          height: 30px;
+          width: 30px;
+          line-height: 30px;
+          text-align: center; }
+
+/*------ search搜索页主体 ------*/
+/*------ searchList样式 ------*/
+.searchList_main .sort {
+  padding: 10px 0; }
+  .searchList_main .sort ul {
+    height: 30px;
+    padding: 0 10px;
+    background-color: #eee; }
+    .searchList_main .sort ul li {
+      float: left;
+      width: 25%;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      color: #666; }
+      .searchList_main .sort ul li P {
+        margin: 0; }
+.searchList_main .products {
+  padding: 10px;
+  text-align: center; }
+  .searchList_main .products ul {
+    padding: 0;
+    margin: 0; }
+    .searchList_main .products ul li {
+      width: 48%;
+      padding: 10px;
+      float: left;
+      border: 1px solid #ccc;
+      margin-bottom: 10px; }
+      .searchList_main .products ul li img {
+        width: 100%; }
+      .searchList_main .products ul li p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2; }
+      .searchList_main .products ul li span:first-child {
+        color: red;
+        margin: 0 5px; }
+      .searchList_main .products ul li span:last-child {
+        color: #ccc;
+        text-decoration: line-through; }
+      .searchList_main .products ul li button {
+        background-color: #007AFF;
+        color: #fff;
+        font-size: 14px; }
+    .searchList_main .products ul li:nth-child(odd) {
+      margin-right: 4%; }
+
+/*------ searchList样式 ------*/
 
 /*# sourceMappingURL=common.css.map */

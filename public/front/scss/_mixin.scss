@@ -16,3 +16,43 @@
   top: 50%;
   transform: translateY(-50%);
 }
+
+@mixin products {
+  padding: 10px;
+  text-align: center;
+  ul {
+    @extend .clearfix;
+    padding: 0;
+    margin: 0;
+    li {
+      width: 48%;
+      padding: 10px;
+      float: left;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      img {
+        width: 100%;
+      }
+      p {
+        @include textCut();
+      }
+      span:first-child {
+        color: red;
+        margin: 0 5px;
+      }
+      span:last-child {
+        color: #ccc;
+        text-decoration: line-through;
+      }
+      button {
+        background-color: #007AFF;
+        color: #fff;
+        font-size: 14px;
+      }
+    }
+  ;
+    li:nth-child(odd) {
+      margin-right: 4%;
+    }
+  }
+}

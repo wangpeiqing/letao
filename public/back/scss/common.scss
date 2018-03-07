@@ -152,6 +152,12 @@ form {
           }
         }
       }
+      .main{
+        .chart_01,.chart_02{
+          width: 45%;
+          height: 900px;
+        }
+      }
 
       /*------ 一级分类 ------*/
       .first_content, .second_content, .product_content {
