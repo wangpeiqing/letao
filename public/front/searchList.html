@@ -23,7 +23,7 @@
     </div>
 </div>
 <div class="searchList_main">
-    <div class="mui-scroll-wrapper">
+    <div id="refreshContainer" class="mui-scroll-wrapper">
         <div class="mui-scroll">
             <div class="search">
                 <input type="text" name="" id="" class="text_search" placeholder="请输入搜索关键字">
@@ -46,7 +46,7 @@
                 </ul>
             </div>
             <div class="products">
-                <ul>
+                <ul class="mui-table-view mui-table-view-chevron">
                     <!--产品模板-->
                     <div class="loading"></div>
                 </ul>
@@ -93,7 +93,7 @@
 
     {{each data v i}}
     <li data-id="{{v.id}}">
-        <a href="javascript:void(0);">
+        <a href="product.html?productId={{v.id}}">
             <div>
                 <img src="{{v.pic[0].picAddr}}" alt="">
                 <p>{{v.proName}} </p>

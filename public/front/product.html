@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+</head>
+<body>
+<div class="head">
+    <div class="home">
+        <a href="javascript:history.go(-1);">
+            <span class="mui-icon mui-icon-back"></span>
+        </a>
+    </div>
+    <span>商品详情</span>
+    <div class="search">
+        <a href="javascript:location.reload();">
+            <span class="mui-icon mui-icon-reload"></span>
+        </a>
+    </div>
+</div>
+<div class="product_main">
+    <div id="refreshContainer" class="mui-scroll-wrapper">
+        <div class="mui-scroll mui-table-view mui-table-view-chevron">
+            <!--产品banner模板-->
+
+        </div>
+    </div>
+</div>
+<div class="product_footer">
+
+</div>
+
+</body>
+<!--产品banner模板-->
+<script type="text/html" id="product">
+    <div class="banner">
+        <div class="mui-slider">
+            <div class="mui-slider-group mui-slider-loop">
+                <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img
+                        src="{{pic[0].picAddr}}"/></a>
+                </div>
+                {{each pic v i}}
+                <div class="mui-slider-item"><a href="#"><img src="{{v.picAddr}}"/></a></div>
+                {{/each}}
+                <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img
+                        src="{{pic[0].picAddr}}"/></a>
+                </div>
+            </div>
+            <div class="mui-slider-indicator">
+                {{each pic v i}}
+                <div class="mui-indicator {{i==0?'mui-active':''}}"></div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    <div class="proName proAttr">
+        <span>{{proName}}</span>
+    </div>
+    <div class="price proAttr">
+        <div class="title">价格:</div> <span>&yen;{{price}}</span> <span class="oldPrice">{{oldPrice}}</span>
+    </div>
+    <div class="size proAttr">
+        <div class="title">尺码:</div>{{size}}
+    </div>
+    <div class="num proAttr">
+        <div class="title">数量:</div>
+        <div class="mui-numbox" data-numbox-step='1' data-numbox-min='1' data-numbox-max='{{num}}'>
+            <!-- "-"按钮，点击可减小当前数值 -->
+            <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+            <input class="mui-numbox-input" type="number"/>
+            <!-- "+"按钮，点击可增大当前数值 -->
+            <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+        </div>
+        <span>剩余数量{{num}}双</span>
+    </div>
+    <div class="proDesc proAttr">
+        <div class="title">详情:</div> <span>{{proDesc}}</span>
+    </div>
+
+</script>
+<!--产品banner模板-->
+
+
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/mui/js/mui.min.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/product.js"></script>
+</html>

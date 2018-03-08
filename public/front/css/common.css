@@ -307,7 +307,7 @@ ul {
         margin-bottom: 10px; }
         .index_main .products ul li img {
           max-width: 100%;
-          height: 209px; }
+          height: 150px; }
         .index_main .products ul li p {
           overflow: hidden;
           text-overflow: ellipsis;
@@ -484,7 +484,7 @@ ul {
         margin-bottom: 10px; }
         .searchList_main .products ul li img {
           max-width: 100%;
-          height: 209px; }
+          height: 150px; }
         .searchList_main .products ul li p {
           overflow: hidden;
           text-overflow: ellipsis;
@@ -518,5 +518,34 @@ ul {
   to {
     transform: translate(-50%, -50%) rotate(360deg); } }
 /*------ searchList样式 ------*/
+/*------ product_main ------*/
+.product_main {
+  width: 100%;
+  position: relative;
+  height: 100%; }
+  .product_main .proAttr {
+    padding: 10px;
+    border-top: 1px solid #ccc; }
+    .product_main .proAttr div.title {
+      display: inline-block;
+      margin-right: 10px; }
+  .product_main .proName {
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; }
+  .product_main .price span {
+    color: red; }
+  .product_main .price .oldPrice {
+    font-size: 12px;
+    color: #666;
+    text-decoration: line-through; }
+  .product_main .num span {
+    font-size: 12px;
+    color: #666; }
+
+/*------ product_main ------*/
 
 /*# sourceMappingURL=common.css.map */
