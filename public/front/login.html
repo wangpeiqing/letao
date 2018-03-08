@@ -15,24 +15,30 @@
             <span class="mui-icon mui-icon-back"></span>
         </a>
     </div>
-    <span>搜索中心</span>
+    <span>登录</span>
     <div class="search">
         <a href="search.html">
             <!--<span class="fa fa-search"></span>-->
         </a>
     </div>
 </div>
-<div class="search_main">
-    <div class="mui-scroll-wrapper">
-        <div class="mui-scroll">
-            <div class="search">
-                <input type="text" name="" id="" class="text_search" placeholder="请输入搜索关键字">
-                <button class="btn_search">搜索</button>
-            </div>
-            <div class="search_history">
-                <!--查询历史模板-->
-            </div>
+<div class="login_main">
+    <form class="mui-input-group">
+        <div class="mui-input-row">
+            <label>用户名</label>
+            <input type="text" name="username" class="mui-input-clear" placeholder="请输入用户名">
         </div>
+        <div class="mui-input-row">
+            <label>密码</label>
+            <input type="password" name="password" class="mui-input-password" placeholder="请输入密码">
+        </div>
+        <div class="mui-button-row">
+            <button type="reset" class="mui-btn mui-btn-primary" >重置</button>
+            <button type="button" class="mui-btn mui-btn-danger btn_confirm" >确认</button>
+        </div>
+    </form>
+    <div class="register">
+        <a href="register.html">免费注册</a>
     </div>
 </div>
 <div class="footer">
@@ -57,7 +63,7 @@
             购物车
         </a>
     </div>
-    <div class="user">
+    <div class="user current">
         <a href="user.html">
             <span class="fa fa-user"></span>
             <br>
@@ -66,38 +72,9 @@
     </div>
 </div>
 </body>
-
-<!--查询历史模板-->
-<script type="text/html" id="search_history">
-    {{if arr.length==0}}
-    <p>没有查询到历史信息</p>
-    {{else}}
-    <div class="title mui-clearfix">
-        <div class="history">
-            <span>历史记录</span>
-        </div>
-        <div class="btn_empty">
-            <span class="fa fa-trash">清空历史记录</span>
-        </div>
-    </div>
-    <ul>
-        {{each arr v i}}
-        <li>
-            <a href="searchList.html?key={{v}}" data-index="{{i}}">
-                {{v}}
-            </a>
-            <span class="mui-icon mui-icon-closeempty mui-pull-right btn_delete"></span>
-        </li>
-        {{/each}}
-    </ul>
-    {{/if}}
-
-</script>
-<!--查询历史模板-->
-
 <script src="./lib/zepto/zepto.min.js"></script>
 <script src="./lib/artTemplate/template-web.js"></script>
 <script src="./lib/mui/js/mui.min.js"></script>
 <script src="./js/common.js"></script>
-<script src="./js/search.js"></script>
+<script src="./js/login.js"></script>
 </html>

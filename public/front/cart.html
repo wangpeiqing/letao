@@ -15,23 +15,17 @@
             <span class="mui-icon mui-icon-back"></span>
         </a>
     </div>
-    <span>搜索中心</span>
+    <span>购物车</span>
     <div class="search">
         <a href="search.html">
             <!--<span class="fa fa-search"></span>-->
         </a>
     </div>
 </div>
-<div class="search_main">
+<div class="cart_main">
     <div class="mui-scroll-wrapper">
         <div class="mui-scroll">
-            <div class="search">
-                <input type="text" name="" id="" class="text_search" placeholder="请输入搜索关键字">
-                <button class="btn_search">搜索</button>
-            </div>
-            <div class="search_history">
-                <!--查询历史模板-->
-            </div>
+            1111
         </div>
     </div>
 </div>
@@ -50,15 +44,15 @@
             分类
         </a>
     </div>
-    <div class="cart">
-        <a href="cart.html">
+    <div class="cart current">
+        <a href="javascript:void(0);">
             <span class="fa fa-shopping-cart"></span>
             <br>
             购物车
         </a>
     </div>
     <div class="user">
-        <a href="user.html">
+        <a href="javascript:void(0);">
             <span class="fa fa-user"></span>
             <br>
             会员中心
@@ -69,28 +63,6 @@
 
 <!--查询历史模板-->
 <script type="text/html" id="search_history">
-    {{if arr.length==0}}
-    <p>没有查询到历史信息</p>
-    {{else}}
-    <div class="title mui-clearfix">
-        <div class="history">
-            <span>历史记录</span>
-        </div>
-        <div class="btn_empty">
-            <span class="fa fa-trash">清空历史记录</span>
-        </div>
-    </div>
-    <ul>
-        {{each arr v i}}
-        <li>
-            <a href="searchList.html?key={{v}}" data-index="{{i}}">
-                {{v}}
-            </a>
-            <span class="mui-icon mui-icon-closeempty mui-pull-right btn_delete"></span>
-        </li>
-        {{/each}}
-    </ul>
-    {{/if}}
 
 </script>
 <!--查询历史模板-->
@@ -99,5 +71,5 @@
 <script src="./lib/artTemplate/template-web.js"></script>
 <script src="./lib/mui/js/mui.min.js"></script>
 <script src="./js/common.js"></script>
-<script src="./js/search.js"></script>
+<script src="./js/cart.js"></script>
 </html>

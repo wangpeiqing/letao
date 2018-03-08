@@ -22,9 +22,43 @@
                     });
                     //初始化数字选择框
                     mui('.mui-numbox').numbox();
+
                 }, 500)
 
+                //加入购物车
+                $(".addToCart").on('tap',function (){
+                    var size;
+                    if ($(".sizeNum.current").length>0) {
+                        size = $(".sizeNum.current").data('num');
+                    }else{
+                        mui.toast('请选择尺码', {duration: '500', type: 'div'});
+                        return;
+                    }
+                    var num = $(".num input").val();
+                    var id = $(".proName").data('id');
+                    $.ajax({
+                        url:'/cart/addCart',
+                        type:'post',
+                        data:{
+                            productId:id,
+                            num:num,
+                            size:size
+                        },
+                        success:function (info){
+                            console.log(info);
+                            if (info.error==400) {
+                                window.location.href = 'login.html?returnHref='+location.href;
+                            }else{
+                                mui.confirm('添加成功','温馨提示',['去购物车','再逛逛'],function (e){
+                                    if (e.index==0) {
+                                        window.location.href = 'cart.html';
+                                    }
+                                })
+                            }
+                        }
+                    })
 
+                })
             }
         })
     }
@@ -50,6 +84,7 @@
 
     $(".product_main").on('tap','.sizeNum',function (){
         $(this).addClass('current').siblings().removeClass('current');
-        console.log($(this).data('num'));
     })
+
+
 })
