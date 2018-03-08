@@ -430,3 +430,66 @@ ul {
 }
 /*------ login ------*/
 
+
+/*------ user ------*/
+.user_main{
+  .btn_quit{
+    display: block;
+    width: 90%;
+    margin:0 auto;
+    margin-top:15px;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #ccc;
+  }
+}
+/*------ user ------*/
+
+/*------ register ------*/
+.register_main{
+  .mui-input-row{
+    border:none;
+    height:auto;
+    padding: 8px 10px;
+    .mui-icon-eye,.mui-icon-clear{
+      right: 10px;
+      top: 18px;
+    }
+    button{
+      width: 30%;
+      height: 40px;
+    }
+
+  }
+  .register{
+    width: 95%;
+    height: 40px;
+  }
+  .mui-input-row:after,.mui-input-group:after{
+    display: none;
+  }
+  input{
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  input[name=vCode]{
+    width: 65%;
+  }
+
+  .last{
+    padding:10px;
+    font-size: 12px;
+    vertical-align: middle;
+    .loginNow{
+      float: right;
+    }
+    input{
+      width: 15px;
+      height: 15px;
+      display: inline-block;
+      vertical-align: text-top;
+    }
+  }
+}
+/*------ register ------*/
+

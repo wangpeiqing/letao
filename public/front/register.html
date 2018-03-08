@@ -22,11 +22,34 @@
         </a>
     </div>
 </div>
-<div class="user_main">
-    <ul class="mui-table-view user_info">
-
-    </ul>
-    <button class="mui-btn mui-btn-primary btn_quit">退出登录</button>
+<div class="register_main">
+    <form class="mui-input-group">
+        <div class="mui-input-row">
+            <input type="text" name="username" class="mui-input-clear" placeholder="请输入用户名">
+        </div>
+        <div class="mui-input-row">
+            <input type="password" name="password" class="mui-input-clear mui-input-password" placeholder="请输入密码">
+        </div>
+        <div class="mui-input-row">
+            <input type="password" class="mui-input-clear mui-input-password" placeholder="请确认密码">
+        </div>
+        <div class="mui-input-row">
+            <input type="text" name="mobile" class="mui-input-clear" placeholder="请输入手机号">
+        </div>
+        <div class="mui-input-row">
+            <input type="text" name="vCode" class="mui-input-clear" placeholder="请输入验证码">
+            <button class="mui-btn mui-btn-primary">获取验证码</button>
+        </div>
+        <div class="mui-button-row">
+            <button type="button" class="mui-btn mui-btn-primary register" >注册</button>
+        </div>
+    </form>
+    <div class="last">
+        <input type="checkbox" class="agree" name="agree"><span>我同意 <a href="javascript:void(0);">《会员服务协议》</a> </span>
+        <div class="loginNow">
+            <span>立即登录</span>
+        </div>
+    </div>
 </div>
 <div class="footer">
     <div class="home">
@@ -59,29 +82,10 @@
     </div>
 </div>
 </body>
-<script type="text/html" id="userTem">
-    <li class="mui-table-view-cell mui-media">
-        <a href="javascript:;">
-            <img class="mui-media-object mui-pull-left" src="images/user.jpg">
-            <div class="mui-media-body">
-                {{username}}
-                <p class='mui-ellipsis'>绑定手机:{{mobile}}</p>
-            </div>
-        </a>
-    </li>
-    <li class="mui-table-view-cell">
-        <a class="mui-navigate-right">账号与安全</a>
-    </li>
-    <li class="mui-table-view-cell">
-        <a href="cart.html" class="mui-navigate-right">我的购物车</a>
-    </li>
-    <li class="mui-table-view-cell">
-        <a class="mui-navigate-right">收货地址管理</a>
-    </li>
-</script>
+
 <script src="./lib/zepto/zepto.min.js"></script>
 <script src="./lib/artTemplate/template-web.js"></script>
 <script src="./lib/mui/js/mui.min.js"></script>
 <script src="./js/common.js"></script>
-<script src="./js/user.js"></script>
+<script src="./js/register.js"></script>
 </html>
