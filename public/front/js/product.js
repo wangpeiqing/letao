@@ -46,4 +46,10 @@
             }
         }
     })
+
+
+    $(".product_main").on('tap','.sizeNum',function (){
+        $(this).addClass('current').siblings().removeClass('current');
+        console.log($(this).data('num'));
+    })
 })

@@ -30,9 +30,16 @@
         </div>
     </div>
 </div>
-<div class="product_footer">
-
+<div class="product_footer mui-clearfix">
+    <div class="goCart">
+        <a href="cart.html">去购物车</a>
+    </div>
+    <div class="buttons">
+        <button class="addToCart mui-btn mui-btn-danger">加入购物车</button>
+        <button class="buyNow mui-btn mui-btn-warning">立即购买</button>
+    </div>
 </div>
+
 
 </body>
 <!--产品banner模板-->
@@ -64,7 +71,13 @@
         <div class="title">价格:</div> <span>&yen;{{price}}</span> <span class="oldPrice">{{oldPrice}}</span>
     </div>
     <div class="size proAttr">
-        <div class="title">尺码:</div>{{size}}
+        <div class="title">尺码:</div>
+        <%
+            var tem=size.split('-');
+            for(var i=tem[0];i<=tem[1];i++){
+        %>
+        <span class="sizeNum" data-num="{{i}}">{{i}}</span>
+        <%}%>
     </div>
     <div class="num proAttr">
         <div class="title">数量:</div>
