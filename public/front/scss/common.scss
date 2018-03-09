@@ -21,8 +21,8 @@ ul {
 }
 
 /*------ 强制隐藏由于下拉刷新导致区域滚动隐藏失败的滑动条 ------*/
-.mui-scrollbar{
-  opacity: 0!important;
+.mui-scrollbar {
+  opacity: 0 !important;
   //display: none;
 }
 
@@ -352,7 +352,7 @@ ul {
   .proAttr {
     padding: 10px;
     border-top: 1px solid #ccc;
-    div.title{
+    div.title {
       display: inline-block;
       margin-right: 10px;
     }
@@ -361,32 +361,32 @@ ul {
     font-weight: 600;
     @include textCut(2);
   }
-  .price{
-    span{
+  .price {
+    span {
       color: red;
     }
-    .oldPrice{
+    .oldPrice {
       font-size: 12px;
       color: #666;
       text-decoration: line-through;
     }
   }
-  .size{
-    .sizeNum{
+  .size {
+    .sizeNum {
       display: inline-block;
       width: 25px;
       height: 25px;
-      line-height:25px;
+      line-height: 25px;
       text-align: center;
-      font-size:12px;
+      font-size: 12px;
       border: 1px solid #ccc;
       background-color: #eee;
     }
-    .sizeNum.current{
+    .sizeNum.current {
       background-color: pink;
     }
   }
-  .num{
+  .num {
     span {
       font-size: 12px;
       color: #666;
@@ -394,26 +394,26 @@ ul {
   }
 }
 
-.product_footer{
+.product_footer {
   height: 55px;
   border-top: 1px solid red;
   background-color: #eee;
-  .goCart{
+  .goCart {
     height: 100%;
     font-size: 14px;
     float: left;
-    padding:0 20px;
-    a{
+    padding: 0 20px;
+    a {
       display: block;
       height: 100%;
-      line-height:55px;
+      line-height: 55px;
     }
   }
-  .buttons{
+  .buttons {
     float: right;
-    margin-top:10px;
-    padding-right:10px;
-    button{
+    margin-top: 10px;
+    padding-right: 10px;
+    button {
     }
   }
 }
@@ -421,73 +421,74 @@ ul {
 /*------ product_main ------*/
 
 /*------ login ------*/
-.login_main{
-  .register{
+.login_main {
+  .register {
     float: right;
     font-size: 12px;
-    padding:10px;
+    padding: 10px;
   }
 }
+
 /*------ login ------*/
 
-
 /*------ user ------*/
-.user_main{
-  .btn_quit{
+.user_main {
+  .btn_quit {
     display: block;
     width: 90%;
-    margin:0 auto;
-    margin-top:15px;
+    margin: 0 auto;
+    margin-top: 15px;
     background-color: #fff;
     color: #000;
     border: 1px solid #ccc;
   }
 }
+
 /*------ user ------*/
 
 /*------ register ------*/
-.register_main{
-  .mui-input-row{
-    border:none;
-    height:auto;
+.register_main {
+  .mui-input-row {
+    border: none;
+    height: auto;
     padding: 8px 10px;
-    .mui-icon-eye,.mui-icon-clear{
+    .mui-icon-eye, .mui-icon-clear {
       right: 10px;
       top: 18px;
     }
-    button{
+    button {
       width: 30%;
       height: 40px;
     }
   }
-  .row_password,.row_vCode{
-    .mui-icon-clear{
+  .row_password, .row_vCode {
+    .mui-icon-clear {
       display: none;
     }
   }
-  .register{
+  .register {
     width: 95%;
     height: 40px;
   }
-  .mui-input-row:after,.mui-input-group:after{
+  .mui-input-row:after, .mui-input-group:after {
     display: none;
   }
-  input{
+  input {
     border: 1px solid #ccc;
     border-radius: 3px;
   }
-  input[name=vCode]{
+  input[name=vCode] {
     width: 65%;
   }
 
-  .last{
-    padding:10px;
+  .last {
+    padding: 10px;
     font-size: 12px;
     vertical-align: middle;
-    .loginNow{
+    .loginNow {
       float: right;
     }
-    input{
+    input {
       width: 15px;
       height: 15px;
       display: inline-block;
@@ -495,5 +496,121 @@ ul {
     }
   }
 }
+
 /*------ register ------*/
+
+/*------ cart ------*/
+.cart_body{
+  padding-bottom:85px;
+}
+.cart_main {
+  position: relative;
+  height: 100%;
+  ul{
+    li{
+      .mui-slider-handle{
+        width: 100%;
+        .mui-table-cell{
+          width: 100%;
+          display: inline-block;
+          padding-left: 70px;
+        }
+      }
+    }
+  }
+  .mui-table-cell {
+    .image {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 60px;
+      height: 60px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .info {
+      width: 100%;
+      p {
+        color: #000;
+        margin-bottom:5px;
+        height: 42px;
+        width: 100%;
+      }
+      span {
+        font-size: 14px;
+      }
+      .price {
+        color: red;
+      }
+      .size {
+        color: #aaa;
+      }
+      .oldPrice {
+        color: #aaa;
+        text-decoration: line-through;
+      }
+      .num {
+        float: right;
+        color: #aaa;
+      }
+    }
+    input[type=checkbox] {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+}
+.mui-popup-text{
+  text-align: left!important;
+}
+
+.update_size {
+  .sizeNum {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    background-color: #eee;
+    margin-bottom:5px;
+  }
+  .sizeNum.current {
+    background-color: pink;
+  }
+}
+.order_info{
+  height: 30px;
+  position: absolute;
+  left: 0;
+  bottom: 55px;
+  background-color: #eee;
+  border-top: 1px solid #aaa;
+  width: 100%;
+  font-size: 12px;
+  @extend .clearfix;
+  .total_money{
+    float: left;
+    height: 100%;
+    line-height:30px;
+    padding-left:10px;
+    span{
+      color:red;
+    }
+  }
+  .addOrder{
+    float: right;
+    height: 100%;
+    line-height:29px;
+    width: 80px;
+    text-align: center;
+    background-color: red;
+    color: #fff;
+  }
+}
+/*------ cart ------*/
 
