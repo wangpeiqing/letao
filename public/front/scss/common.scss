@@ -459,7 +459,11 @@ ul {
       width: 30%;
       height: 40px;
     }
-
+  }
+  .row_password,.row_vCode{
+    .mui-icon-clear{
+      display: none;
+    }
   }
   .register{
     width: 95%;

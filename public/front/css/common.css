@@ -609,6 +609,8 @@ ul {
   .register_main .mui-input-row button {
     width: 30%;
     height: 40px; }
+.register_main .row_password .mui-icon-clear, .register_main .row_vCode .mui-icon-clear {
+  display: none; }
 .register_main .register {
   width: 95%;
   height: 40px; }
